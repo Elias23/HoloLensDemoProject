@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 1013389281}
   - component: {fileID: 1013389283}
   - component: {fileID: 1013389282}
+  - component: {fileID: 1013389284}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -427,6 +428,23 @@ MonoBehaviour:
   TrianglesPerCubicMeter: 500
   Extents: {x: 100, y: 100, z: 100}
   TimeBetweenUpdates: 3.5
+--- !u!114 &1013389284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013389277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1f5e036528aed449ea4f351a1b500a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitScanningByTime: 1
+  scanTime: 30
+  defaultMaterial: {fileID: 2100000, guid: d698790d3facd3d4289a13fa1243030a, type: 2}
+  secondaryMaterial: {fileID: 2100000, guid: 87d6ce01bee127444bd83fe2d2139bee, type: 2}
+  minimumFloors: 1
+  minimumWalls: 1
 --- !u!1 &1113389492
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +557,10 @@ Prefab:
     - target: {fileID: 4000010851589146, guid: 51b41ec5969fc8d41876ad5feac8b91b, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011371886218, guid: 51b41ec5969fc8d41876ad5feac8b91b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.283
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b41ec5969fc8d41876ad5feac8b91b, type: 2}

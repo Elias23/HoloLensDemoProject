@@ -85,14 +85,15 @@ namespace HoloToolkit.Unity
             else
             {
 
+                spatialMappingManager.DrawVisualMeshes = false;
+                // Add world anchor when object placement is done.
+                anchorManager.AttachAnchor(gameObject, SavedAnchorFriendlyName);
+
                 foreach (Rigidbody rb in this.GetComponentsInChildren<Rigidbody>())
                 {
                     rb.isKinematic = false;
                 }
 
-                spatialMappingManager.DrawVisualMeshes = false;
-                // Add world anchor when object placement is done.
-                anchorManager.AttachAnchor(gameObject, SavedAnchorFriendlyName);
             }
         }
 
