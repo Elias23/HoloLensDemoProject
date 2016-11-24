@@ -72,6 +72,9 @@ namespace HoloToolkit.Unity
             // If the user is in placing mode, display the spatial mapping mesh.
             if (placing)
             {
+                foreach (Rigidbody rb in this.GetComponentsInChildren<Rigidbody>()) {
+                    rb.isKinematic = true;
+                }
                 spatialMappingManager.DrawVisualMeshes = true;
 
                 Debug.Log(gameObject.name + " : Removing existing world anchor if any.");
@@ -81,6 +84,12 @@ namespace HoloToolkit.Unity
             // If the user is not in placing mode, hide the spatial mapping mesh.
             else
             {
+
+                foreach (Rigidbody rb in this.GetComponentsInChildren<Rigidbody>())
+                {
+                    rb.isKinematic = false;
+                }
+
                 spatialMappingManager.DrawVisualMeshes = false;
                 // Add world anchor when object placement is done.
                 anchorManager.AttachAnchor(gameObject, SavedAnchorFriendlyName);
