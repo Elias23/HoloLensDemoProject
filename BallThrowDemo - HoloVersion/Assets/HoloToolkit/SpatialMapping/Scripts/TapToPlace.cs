@@ -88,7 +88,6 @@ namespace HoloToolkit.Unity
                 spatialMappingManager.DrawVisualMeshes = false;
                 // Add world anchor when object placement is done.
                 anchorManager.AttachAnchor(gameObject, SavedAnchorFriendlyName);
-
                 foreach (Rigidbody rb in this.GetComponentsInChildren<Rigidbody>())
                 {
                     rb.isKinematic = false;
@@ -120,10 +119,13 @@ namespace HoloToolkit.Unity
                     this.transform.position = hitInfo.point;
 
                     // Rotate this object to face the user.
+                  
                     Quaternion toQuat = Camera.main.transform.localRotation;
                     toQuat.x = 0;
+                    toQuat.y = 0;
                     toQuat.z = 0;
                     this.transform.rotation = toQuat;
+                    
                 }
             }
         }
