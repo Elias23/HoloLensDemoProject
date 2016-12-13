@@ -28,4 +28,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-BallThrowDemo - HoloVersion/App/
+/BallThrowDemo - HoloVersion/App/
+!/BallThrowDemo - HoloVersion/App/BallThrowDemo - HoloVersion/AppPackages/
